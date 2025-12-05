@@ -1,0 +1,184 @@
+# Recall Project - Git Ignore
+
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# ==========================================
+# Configuration & Secrets
+# ==========================================
+backend-worker/config/config.yaml
+backend-worker/.env
+.env
+.env.local
+.env.*.local
+
+# API Keys (никогда не коммитить!)
+*api_key*
+*secret*
+*credentials*.json
+
+# ==========================================
+# Logs & Temporary Files
+# ==========================================
+backend-worker/logs/
+*.log
+*.log.*
+*.tmp
+*.temp
+
+# ==========================================
+# Pyrogram Sessions
+# ==========================================
+backend-worker/sessions/
+*.session
+*.session-journal
+
+# ==========================================
+# Database
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================================
+# Flutter
+# ==========================================
+flutter-app/.dart_tool/
+flutter-app/.flutter-plugins
+flutter-app/.flutter-plugins-dependencies
+flutter-app/.packages
+flutter-app/.pub-cache/
+flutter-app/.pub/
+flutter-app/build/
+flutter-app/ios/Pods/
+flutter-app/ios/.symlinks/
+flutter-app/ios/Flutter/Flutter.framework
+flutter-app/ios/Flutter/Flutter.podspec
+flutter-app/android/.gradle/
+flutter-app/android/captures/
+flutter-app/android/gradlew
+flutter-app/android/gradlew.bat
+flutter-app/android/local.properties
+flutter-app/android/key.properties
+
+# Flutter/Dart generated files
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+
+# Firebase
+flutter-app/android/app/google-services.json
+flutter-app/ios/Runner/GoogleService-Info.plist
+flutter-app/.firebase/
+
+# ==========================================
+# IDE & Editors
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# VS Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ==========================================
+# Node.js (for Supabase CLI)
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# ==========================================
+# Docker
+# ==========================================
+docker-compose.override.yml
+
+# ==========================================
+# OS
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# Project Specific
+# ==========================================
+# Test data
+test_data/
+temp_sessions/
+
+# Coverage reports
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+
+# Pytest
+.pytest_cache/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ==========================================
+# Backup Files
+# ==========================================
+*.bak
+*.backup
+*.old
+*~

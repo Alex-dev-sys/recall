@@ -1,0 +1,54 @@
+# Recall Project - Configuration File
+# Copy this file to config.yaml and fill in your values
+
+# Supabase Configuration
+supabase:
+  url: "https://your-project.supabase.co"
+  service_role_key: "your-service-role-key-here"
+  anon_key: "your-anon-key-here"
+
+# Telegram API Configuration
+telegram:
+  api_id: 12345678
+  api_hash: "your-api-hash-here"
+  session_encryption_key: "your-32-byte-encryption-key-here"  # Used to encrypt/decrypt sessions
+
+# AI Configuration
+ai:
+  provider: "openai"  # or "anthropic", "together", "local"
+  model: "gpt-4o-mini"  # or "claude-3-5-sonnet-20241022", etc.
+  api_key: "your-ai-api-key-here"
+  base_url: null  # Optional: for custom endpoints
+  max_retries: 3
+  timeout: 30
+
+# Worker Configuration
+worker:
+  poll_interval: 1  # How often to check for new messages (seconds)
+  heartbeat_interval: 30  # How often to update worker status (seconds)
+  max_concurrent_users: 10  # Max number of user sessions to run simultaneously
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# AI Pipeline Configuration
+pipeline:
+  min_confidence_threshold: 0.6  # Minimum confidence to save task
+  duplicate_similarity_threshold: 0.85  # Cosine similarity threshold for duplicates
+  max_tasks_for_dedup_check: 50  # Max recent tasks to check for duplicates
+  enable_semantic_search: true  # Use embeddings for better duplicate detection
+
+# Notification Settings
+notifications:
+  enable_immediate: true  # Send push on task creation
+  enable_reminders: true  # Send reminder notifications
+  reminder_intervals:  # Minutes before deadline
+    - 1440  # 24 hours
+    - 60    # 1 hour
+    - 15    # 15 minutes
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/recall_worker.log"
+  max_size_mb: 100
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
