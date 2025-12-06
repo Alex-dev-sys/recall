@@ -59,20 +59,20 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
           end: Alignment.bottomRight,
           colors: _selectedIndex == 0
               ? [
-                  const Color(0xFF6366F1).withOpacity(0.1),
-                  const Color(0xFF8B5CF6).withOpacity(0.05),
-                  const Color(0xFF3B82F6).withOpacity(0.08),
+                  const Color(0xFF6366F1).withValues(alpha: 0.1),
+                  const Color(0xFF8B5CF6).withValues(alpha: 0.05),
+                  const Color(0xFF3B82F6).withValues(alpha: 0.08),
                 ]
               : _selectedIndex == 1
                   ? [
-                      const Color(0xFF3B82F6).withOpacity(0.1),
-                      const Color(0xFF06B6D4).withOpacity(0.05),
-                      const Color(0xFF10B981).withOpacity(0.08),
+                      const Color(0xFF3B82F6).withValues(alpha: 0.1),
+                      const Color(0xFF06B6D4).withValues(alpha: 0.05),
+                      const Color(0xFF10B981).withValues(alpha: 0.08),
                     ]
                   : [
-                      const Color(0xFF8B5CF6).withOpacity(0.1),
-                      const Color(0xFFEC4899).withOpacity(0.05),
-                      const Color(0xFF6366F1).withOpacity(0.08),
+                      const Color(0xFF8B5CF6).withValues(alpha: 0.1),
+                      const Color(0xFFEC4899).withValues(alpha: 0.05),
+                      const Color(0xFF6366F1).withValues(alpha: 0.08),
                     ],
         ),
       ),
@@ -86,7 +86,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: AppBar(
-            backgroundColor: Colors.white.withOpacity(0.3),
+            backgroundColor: Colors.white.withValues(alpha: 0.3),
             elevation: 0,
             title: Row(
               children: [
@@ -120,7 +120,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                 icon: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.white.withValues(alpha: 0.5),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: const Icon(Icons.refresh_rounded, size: 20),
@@ -138,7 +138,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                 icon: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Colors.red.withOpacity(0.1),
+                    color: Colors.red.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: const Icon(Icons.logout_rounded, size: 20, color: Colors.red),
@@ -161,10 +161,10 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.7),
+            color: Colors.white.withValues(alpha: 0.7),
             border: Border(
               top: BorderSide(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 width: 1,
               ),
             ),
@@ -178,7 +178,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                 _selectedIndex = index;
               });
             },
-            indicatorColor: const Color(0xFF6366F1).withOpacity(0.2),
+            indicatorColor: const Color(0xFF6366F1).withValues(alpha: 0.2),
             destinations: const [
               NavigationDestination(
                 icon: Icon(Icons.task_alt_outlined),
@@ -315,8 +315,8 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
     return GlassCard(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       gradientColors: [
-        Colors.white.withOpacity(0.8),
-        Colors.white.withOpacity(0.5),
+        Colors.white.withValues(alpha: 0.8),
+        Colors.white.withValues(alpha: 0.5),
       ],
       child: Row(
         children: [
@@ -327,7 +327,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
               borderRadius: BorderRadius.circular(14),
               boxShadow: [
                 BoxShadow(
-                  color: gradient[0].withOpacity(0.3),
+                  color: gradient[0].withValues(alpha: 0.3),
                   blurRadius: 8,
                   offset: const Offset(0, 4),
                 ),
@@ -351,7 +351,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                 label,
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.black.withOpacity(0.6),
+                  color: Colors.black.withValues(alpha: 0.6),
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -442,7 +442,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF6366F1).withOpacity(0.3),
+                      color: const Color(0xFF6366F1).withValues(alpha: 0.3),
                       blurRadius: 20,
                       offset: const Offset(0, 10),
                     ),
@@ -474,7 +474,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                   profile.phoneNumber!,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.black.withOpacity(0.6),
+                    color: Colors.black.withValues(alpha: 0.6),
                   ),
                 ),
               ],
@@ -585,7 +585,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: gradient[0].withOpacity(0.3),
+                    color: gradient[0].withValues(alpha: 0.3),
                     blurRadius: 30,
                     offset: const Offset(0, 15),
                   ),
@@ -613,7 +613,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.black.withOpacity(0.6),
+                color: Colors.black.withValues(alpha: 0.6),
                 height: 1.5,
               ),
             ),
@@ -657,7 +657,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
               Icon(
                 Icons.error_outline_rounded,
                 size: 64,
-                color: Colors.red.withOpacity(0.7),
+                color: Colors.red.withValues(alpha: 0.7),
               ),
               const SizedBox(height: 16),
               const Text(
@@ -672,7 +672,7 @@ class _HomeScreenGlassState extends ConsumerState<HomeScreenGlass>
                 error,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black.withOpacity(0.6),
+                  color: Colors.black.withValues(alpha: 0.6),
                 ),
               ),
               const SizedBox(height: 24),

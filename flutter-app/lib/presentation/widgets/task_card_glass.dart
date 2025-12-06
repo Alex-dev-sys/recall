@@ -75,20 +75,20 @@ class _TaskCardGlassState extends State<TaskCardGlass>
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          Colors.white.withOpacity(0.8),
-                          Colors.white.withOpacity(0.4),
+                          Colors.white.withValues(alpha: 0.8),
+                          Colors.white.withValues(alpha: 0.4),
                         ],
                       ),
                       borderRadius: BorderRadius.circular(24),
                       border: Border.all(
                         color: isOverdue
-                            ? Colors.red.withOpacity(0.3)
-                            : Colors.white.withOpacity(0.2),
+                            ? Colors.red.withValues(alpha: 0.3)
+                            : Colors.white.withValues(alpha: 0.2),
                         width: 1.5,
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: gradientColors[0].withOpacity(0.1),
+                          color: gradientColors[0].withValues(alpha: 0.1),
                           blurRadius: 20,
                           offset: const Offset(0, 10),
                         ),
@@ -152,7 +152,7 @@ class _TaskCardGlassState extends State<TaskCardGlass>
                                   if (widget.onMarkDone != null)
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: Colors.green.withOpacity(0.1),
+                                        color: Colors.green.withValues(alpha: 0.1),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: IconButton(
@@ -172,13 +172,13 @@ class _TaskCardGlassState extends State<TaskCardGlass>
                                 decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     colors: [
-                                      theme.colorScheme.primary.withOpacity(0.05),
-                                      theme.colorScheme.secondary.withOpacity(0.05),
+                                      theme.colorScheme.primary.withValues(alpha: 0.05),
+                                      theme.colorScheme.secondary.withValues(alpha: 0.05),
                                     ],
                                   ),
                                   borderRadius: BorderRadius.circular(12),
                                   border: Border.all(
-                                    color: theme.colorScheme.primary.withOpacity(0.1),
+                                    color: theme.colorScheme.primary.withValues(alpha: 0.1),
                                   ),
                                 ),
                                 child: Row(
@@ -186,7 +186,7 @@ class _TaskCardGlassState extends State<TaskCardGlass>
                                     Icon(
                                       Icons.format_quote_rounded,
                                       size: 18,
-                                      color: theme.colorScheme.primary.withOpacity(0.5),
+                                      color: theme.colorScheme.primary.withValues(alpha: 0.5),
                                     ),
                                     const SizedBox(width: 10),
                                     Expanded(
@@ -194,7 +194,7 @@ class _TaskCardGlassState extends State<TaskCardGlass>
                                         widget.task.originalQuote,
                                         style: theme.textTheme.bodySmall?.copyWith(
                                           fontStyle: FontStyle.italic,
-                                          color: theme.colorScheme.onSurface.withOpacity(0.7),
+                                          color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                                           height: 1.4,
                                         ),
                                         maxLines: 2,
@@ -213,13 +213,13 @@ class _TaskCardGlassState extends State<TaskCardGlass>
                                   Icon(
                                     Icons.access_time_rounded,
                                     size: 14,
-                                    color: theme.colorScheme.onSurface.withOpacity(0.4),
+                                    color: theme.colorScheme.onSurface.withValues(alpha: 0.4),
                                   ),
                                   const SizedBox(width: 4),
                                   Text(
                                     _formatCreatedAt(widget.task.createdAt),
                                     style: theme.textTheme.bodySmall?.copyWith(
-                                      color: theme.colorScheme.onSurface.withOpacity(0.5),
+                                      color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                                       fontSize: 12,
                                     ),
                                   ),
@@ -266,17 +266,17 @@ class _TaskCardGlassState extends State<TaskCardGlass>
     String text;
 
     if (isOverdue) {
-      bgColor = Colors.red.withOpacity(0.15);
+      bgColor = Colors.red.withValues(alpha: 0.15);
       textColor = Colors.red;
       icon = Icons.alarm_off_rounded;
       text = 'Просрочено';
     } else if (timeUntil != null && timeUntil.inHours < 24) {
-      bgColor = Colors.orange.withOpacity(0.15);
+      bgColor = Colors.orange.withValues(alpha: 0.15);
       textColor = Colors.orange;
       icon = Icons.alarm_on_rounded;
       text = _formatDeadline(widget.task.deadline!);
     } else {
-      bgColor = theme.colorScheme.primary.withOpacity(0.15);
+      bgColor = theme.colorScheme.primary.withValues(alpha: 0.15);
       textColor = theme.colorScheme.primary;
       icon = Icons.schedule_rounded;
       text = _formatDeadline(widget.task.deadline!);
@@ -315,13 +315,13 @@ class _TaskCardGlassState extends State<TaskCardGlass>
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            theme.colorScheme.secondaryContainer.withOpacity(0.6),
-            theme.colorScheme.tertiaryContainer.withOpacity(0.6),
+            theme.colorScheme.secondaryContainer.withValues(alpha: 0.6),
+            theme.colorScheme.tertiaryContainer.withValues(alpha: 0.6),
           ],
         ),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: theme.colorScheme.secondary.withOpacity(0.2),
+          color: theme.colorScheme.secondary.withValues(alpha: 0.2),
         ),
       ),
       child: Text(
