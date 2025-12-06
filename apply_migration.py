@@ -3,6 +3,7 @@
 Apply SQL migration to Supabase database
 """
 import asyncio
+import asyncio
 from supabase import create_client, Client
 
 # Supabase credentials
@@ -11,14 +12,14 @@ SUPABASE_SERVICE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmF
 
 def apply_migration():
     """Apply the SQL migration"""
-    print("🔄 Connecting to Supabase...")
+    print("Connecting to Supabase...")
     supabase: Client = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
-    print("📖 Reading migration file...")
-    with open("supabase/migrations/001_initial_schema.sql", "r", encoding="utf-8") as f:
+    print("Reading migration file...")
+    with open("_supabase/migrations/001_initial_schema.sql", "r", encoding="utf-8") as f:
         sql = f.read()
 
-    print("🚀 Applying migration...")
+    print("Applying migration...")
 
     # Split by statements and execute one by one
     statements = [s.strip() for s in sql.split(';') if s.strip() and not s.strip().startswith('--')]
@@ -29,21 +30,21 @@ def apply_migration():
         try:
             print(f"   Executing statement {i}/{len(statements)}...")
             result = supabase.postgrest.rpc('exec_sql', {'query': statement}).execute()
-            print(f"   ✅ Statement {i} executed")
+            print(f"   Statement {i} executed")
         except Exception as e:
-            print(f"   ⚠️  Statement {i} failed: {e}")
+            print(f"   Statement {i} failed: {e}")
             # Continue with next statement
 
-    print("\n✅ Migration completed!")
-    print("\n📊 Created tables:")
+    print("\nMigration completed!")
+    print("\nCreated tables:")
     print("   - profiles")
     print("   - monitored_chats")
     print("   - tasks")
     print("   - task_notifications")
     print("   - worker_sessions")
-    print("\n🔐 Row Level Security enabled")
-    print("📈 Views and triggers created")
-    print("\n✨ Database is ready!")
+    print("\nRow Level Security enabled")
+    print("Views and triggers created")
+    print("\nDatabase is ready!")
 
 if __name__ == "__main__":
     apply_migration()

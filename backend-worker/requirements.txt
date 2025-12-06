@@ -1,6 +1,6 @@
 # Core dependencies
 pyrogram==2.0.106
-tgcrypto==1.2.5
+# tgcrypto==1.2.5  # Optional, requires C++ Build Tools on Windows
 supabase>=2.10.0
 pyyaml>=6.0.1
 
