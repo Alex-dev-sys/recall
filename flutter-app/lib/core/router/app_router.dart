@@ -5,7 +5,7 @@ import '../../data/models/task.dart';
 import '../../presentation/providers/auth_provider.dart';
 import '../../presentation/screens/login_screen.dart';
 import '../../presentation/screens/verify_code_screen.dart';
-import '../../presentation/screens/home_screen_updated.dart';
+import '../../presentation/screens/home_screen_glass.dart';
 import '../../presentation/screens/task_detail_screen.dart';
 import '../../presentation/screens/chat_selection_screen.dart';
 import '../../presentation/screens/splash_screen.dart';
@@ -83,7 +83,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/home',
         name: 'home',
-        builder: (context, state) => const HomeScreenUpdated(),
+        builder: (context, state) => const HomeScreenGlass(),
       ),
 
       // Task Detail Screen

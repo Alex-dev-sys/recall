@@ -23,7 +23,7 @@ class TaskListNotifier extends StateNotifier<AsyncValue<List<Task>>> {
   }
 
   final String? userId;
-  final _supabase = SupabaseService.instance;
+  // final _supabase = SupabaseService.instance; // Unused in demo mode
 
   Future<void> loadTasks() async {
     if (userId == null) {

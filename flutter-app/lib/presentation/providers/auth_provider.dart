@@ -42,7 +42,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
   }
 
   final _supabase = SupabaseService.instance;
-  final _api = ApiService.instance;
+  // final _api = ApiService.instance; // Unused in demo mode
 
   Future<void> _checkAuthStatus() async {
     try {
