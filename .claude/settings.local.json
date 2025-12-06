@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(flutter --version:*)",
+      "Bash(export PATH=\"/c/src/flutter/bin:$PATH\")",
+      "Bash(flutter config:*)",
+      "Bash(flutter pub:*)",
+      "Bash(flutter build:*)",
+      "Bash(flutter clean:*)",
+      "Bash(cat:*)",
+      "Bash(\"C:\\Users\\user\\OneDrive\\Desktop\\Scribe\\recall-project\\flutter-app\\android\\gradle\\wrapper\\gradle-wrapper.properties\" <<'EOF'\ndistributionBase=GRADLE_USER_HOME\ndistributionPath=wrapper/dists\nzipStoreBase=GRADLE_USER_HOME\nzipStorePath=wrapper/dists\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-8.0-all.zip\nEOF)",
+      "Bash(flutter doctor:*)",
+      "Bash(\"C:\\Users\\user\\OneDrive\\Desktop\\Scribe\\recall-project\\flutter-app\\android\\gradle\\wrapper\\gradle-wrapper.properties\" <<'EOF'\ndistributionBase=GRADLE_USER_HOME\ndistributionPath=wrapper/dists\nzipStoreBase=GRADLE_USER_HOME\nzipStorePath=wrapper/dists\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-8.5-all.zip\nEOF)",
+      "Bash(flutter create:*)",
+      "Bash(tee:*)",
+      "Bash(python:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(\"./КЛИК_МЕНЯ_ДЛЯ_SQL.bat\")",
+      "Bash(\"./КЛИК_МЕНЯ_ДЛЯ_TELEGRAM.bat\")",
+      "Bash(\"./APPLY_MIGRATION.bat\")",
+      "Bash(\"./APPLY_MIGRATION_FIXED.bat\")",
+      "Bash(find . -maxdepth 1 -type f ( -name \"*.md\" -o -name \"*.bat\" -o -name \"*.txt\" ))",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(claude:*)",
+      "Bash(./gradlew clean:*)",
+      "Bash(dart run flutter_launcher_icons)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
